@@ -76,12 +76,6 @@ class SliderTests extends Component {
 }
 ```
 
-## To Do
-
-Please feel free to fork and PR!
-
-* Add the option for custom buttons
-
 ## License
 
 MIT
