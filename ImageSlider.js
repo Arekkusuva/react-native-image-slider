@@ -134,7 +134,8 @@ export default class ImageSlider extends Component {
         const width = this.state.width;
         const height = this.props.height || this.state.height;
         const position = this._getPosition();
-        return (<View>
+        return (
+          <View>
             <ScrollView
                 ref={ref => this._onRef(ref)}
                 decelerationRate={0.99}
@@ -182,6 +183,7 @@ export default class ImageSlider extends Component {
                             })}
                         </View>
                     )
+                    : null
             }
         </View>);
     }
