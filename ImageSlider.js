@@ -165,19 +165,24 @@ export default class ImageSlider extends Component {
                     }
                 })}
             </ScrollView>
-            <View style={[styles.buttons, this.props.buttonsStyle]}>
-                {this.props.images.map((image, index) => {
-                    return (<TouchableHighlight
-                        key={index}
-                        underlayColor="#ccc"
-                        onPress={() => {
-                            return this._move(index);
-                        }}
-                        style={[styles.button, position === index && styles.buttonSelected]}>
-                        <View></View>
-                    </TouchableHighlight>);
-                })}
-            </View>
+            {
+                this.props.images.length > 1
+                    ? (
+                        <View style={[styles.buttons, this.props.buttonsStyle]}>
+                            {this.props.images.map((image, index) => {
+                            return (<TouchableHighlight
+                                key={index}
+                                underlayColor="#ccc"
+                                onPress={() => {
+                                return this._move(index);
+                                }}
+                                style={[styles.button, position === index && styles.buttonSelected]}>
+                                <View></View>
+                            </TouchableHighlight>);
+                            })}
+                        </View>
+                    )
+            }
         </View>);
     }
 }
