@@ -4,7 +4,7 @@ forked from [PaulBGD/react-native-image-slider](https://github.com/PaulBGD/react
 
 ## Updates
 
-New props for dots style was added
+New property "buttonsStyle" for dots style was added.
 
 ## License
 
