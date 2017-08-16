@@ -177,7 +177,12 @@ export default class ImageSlider extends Component {
                                 onPress={() => {
                                 return this._move(index);
                                 }}
-                                style={[styles.button, position === index && styles.buttonSelected]}>
+                                style={[
+                                    styles.button,
+                                    this.props.buttonStyle,
+                                    position === index
+                                        && (this.props.buttonSelectedStyle || styles.buttonSelected),
+                                ]}>
                                 <View></View>
                             </TouchableHighlight>);
                             })}
